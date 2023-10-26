@@ -1,7 +1,7 @@
 package nl.itouchinq.scalescore.user;
 
 import lombok.Getter;
-import nl.itouchinq.scalescore.ScaleScore;
+import nl.itouchinq.scalescore.ScaleCore;
 import org.bson.Document;
 import org.bukkit.Bukkit;
 import org.bukkit.event.EventHandler;
@@ -15,10 +15,10 @@ import java.util.UUID;
 @Getter
 public class UserManager implements Listener {
 
-    private final ScaleScore plugin;
+    private final ScaleCore plugin;
     private final Map<UUID, User> users;
 
-    public UserManager(ScaleScore plugin) {
+    public UserManager(ScaleCore plugin) {
         this.plugin = plugin;
         this.users = new HashMap<>();
 

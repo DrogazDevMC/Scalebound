@@ -5,23 +5,21 @@ import com.mongodb.client.MongoClients;
 import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoDatabase;
 import lombok.Getter;
-import nl.itouchinq.scalescore.ScaleScore;
-import nl.itouchinq.scalescore.config.ConfigType;
+import nl.itouchinq.scalescore.ScaleCore;
 import nl.itouchinq.scalescore.config.impl.Settings;
 import org.bson.Document;
-import org.bukkit.configuration.file.FileConfiguration;
 
 @Getter
 public class MongoHandler {
 
-    private final ScaleScore plugin;
+    private final ScaleCore plugin;
 
     private final MongoClient client;
     private final MongoDatabase database;
 
     private final MongoCollection<Document> users;
 
-    public MongoHandler(ScaleScore plugin) {
+    public MongoHandler(ScaleCore plugin) {
         this.plugin = plugin;
 
         boolean auth = Settings.MONGO_AUTH_ENABLED.getAsBoolean();

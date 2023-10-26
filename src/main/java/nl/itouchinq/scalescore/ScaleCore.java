@@ -12,7 +12,7 @@ import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
 
 @Getter
-public final class ScaleScore extends JavaPlugin {
+public final class ScaleCore extends JavaPlugin {
 
     private MongoHandler mongoHandler;
 
@@ -21,8 +21,8 @@ public final class ScaleScore extends JavaPlugin {
 
     private ConfigManager configManager;
 
-    public static ScaleScore get() {
-        return getPlugin(ScaleScore.class);
+    public static ScaleCore get() {
+        return getPlugin(ScaleCore.class);
     }
 
     @Override

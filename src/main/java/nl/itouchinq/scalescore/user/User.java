@@ -4,7 +4,7 @@ import com.mongodb.client.model.Filters;
 import com.mongodb.client.model.ReplaceOptions;
 import lombok.Getter;
 import lombok.Setter;
-import nl.itouchinq.scalescore.ScaleScore;
+import nl.itouchinq.scalescore.ScaleCore;
 import org.bson.Document;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
@@ -16,7 +16,7 @@ import java.util.UUID;
 @Setter
 public class User {
 
-    private ScaleScore plugin;
+    private ScaleCore plugin;
 
     private UUID uuid;
 
@@ -30,7 +30,7 @@ public class User {
 
     // TODO data variables
 
-    public User(ScaleScore plugin, UUID uuid) {
+    public User(ScaleCore plugin, UUID uuid) {
         this.plugin = plugin;
         this.uuid = uuid;
 
@@ -43,7 +43,7 @@ public class User {
         // TODO data instance
     }
 
-    public User(ScaleScore plugin, Document document) {
+    public User(ScaleCore plugin, Document document) {
         this.plugin = plugin;
 
         this.uuid = UUID.fromString(document.getString("_id"));
