@@ -1,1 +1,0 @@
-package nl.itouchinq.scalescore.utilities;
