@@ -1,6 +1,6 @@
 package nl.itouchinq.scalescore.utilities.command.base;
 
-import nl.itouchinq.scalescore.ScaleScore;
+import nl.itouchinq.scalescore.ScaleCore;
 import nl.itouchinq.scalescore.utilities.command.base.components.MessageResolver;
 import nl.itouchinq.scalescore.utilities.command.exceptions.FEException;
 import nl.fenixnetwerk.modules.utils.CC;
@@ -17,7 +17,7 @@ public class MessageHandler {
 
     private final Map<String, MessageResolver> messages = new HashMap<>();
 
-    private final Configuration configuration = ScaleScore.get().getConfig();
+    private final Configuration configuration = ScaleCore.get().getConfig();
 
     MessageHandler() {
         register("cmd.no.permission", sender -> sender.sendMessage(CC.translate(configuration.getString("general.no-perms"))));
