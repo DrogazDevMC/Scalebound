@@ -1,0 +1,7 @@
+mongo:
+  host: 45.128.157.123
+  port: 27017
+  auth:
+    enabled: false
+    username: ''
+    password: ''

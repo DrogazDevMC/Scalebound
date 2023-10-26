@@ -1,0 +1,4 @@
+name: ScaleScore
+version: '${project.version}'
+main: nl.itouchinq.scalescore.ScaleScore
+api-version: '1.19'
