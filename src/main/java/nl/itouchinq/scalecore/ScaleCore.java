@@ -4,10 +4,11 @@ import lombok.Getter;
 import nl.fenixnetwerk.modules.menu.MenuListener;
 import nl.fenixnetwerk.modules.utils.CC;
 import nl.itouchinq.scalecore.config.ConfigManager;
+import nl.itouchinq.scalecore.listeners.CoinWalkListener;
 import nl.itouchinq.scalecore.mongo.MongoHandler;
 import nl.itouchinq.scalecore.user.User;
 import nl.itouchinq.scalecore.user.UserManager;
-import nl.itouchinq.scalecore.user.command.UserInfoCommand;
+import nl.itouchinq.scalecore.user.information.command.UserInfoCommand;
 import nl.itouchinq.scalecore.utilities.command.base.CommandManager;
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -40,7 +41,7 @@ public final class ScaleCore extends JavaPlugin {
         registerManagers();
 
         CC.console(" ");
-        CC.console("&7[&4&lScaleCore&7] &fEnabled &4&lScaleCore");
+        CC.console("&7[&4&lScaleCore&7] &fenabled &4&lScaleCore");
 
         CC.console(CC.LINE);
     }
@@ -59,7 +60,7 @@ public final class ScaleCore extends JavaPlugin {
 
         userManager.getUsers().values().forEach(User::save);
 
-        CC.console("&7[&4&lScaleCore&7] &7Has been disabled in &a" + (System.currentTimeMillis() - time) + "ms");
+        CC.console("&7[&4&lScaleCore&7] &7has been disabled in &a" + (System.currentTimeMillis() - time) + "ms");
         CC.console(CC.LINE);
     }
 
@@ -72,6 +73,7 @@ public final class ScaleCore extends JavaPlugin {
         new UserInfoCommand();
 
         Bukkit.getPluginManager().registerEvents(new MenuListener(this), this);
+        Bukkit.getPluginManager().registerEvents(new CoinWalkListener(), this);
     }
 
     private void initializeConfig() {

@@ -1,8 +1,8 @@
-package nl.itouchinq.scalecore.user.command;
+package nl.itouchinq.scalecore.user.information.command;
 
 import nl.itouchinq.scalecore.ScaleCore;
 import nl.itouchinq.scalecore.user.User;
-import nl.itouchinq.scalecore.user.menu.PlayerInfoMenu;
+import nl.itouchinq.scalecore.user.information.menu.PlayerInfoMenu;
 import nl.itouchinq.scalecore.utilities.command.annotation.Command;
 import nl.itouchinq.scalecore.utilities.command.annotation.Default;
 import nl.itouchinq.scalecore.utilities.command.base.CommandBase;

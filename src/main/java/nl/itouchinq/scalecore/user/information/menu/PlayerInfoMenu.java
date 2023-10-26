@@ -1,4 +1,4 @@
-package nl.itouchinq.scalecore.user.menu;
+package nl.itouchinq.scalecore.user.information.menu;
 
 import lombok.RequiredArgsConstructor;
 import nl.fenixnetwerk.modules.menu.Menu;
