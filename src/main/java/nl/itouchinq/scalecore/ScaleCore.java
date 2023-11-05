@@ -5,6 +5,7 @@ import nl.fenixnetwerk.modules.menu.MenuListener;
 import nl.fenixnetwerk.modules.utils.CC;
 import nl.itouchinq.scalecore.config.ConfigManager;
 import nl.itouchinq.scalecore.listeners.CoinWalkListener;
+import nl.itouchinq.scalecore.listeners.InteractListener;
 import nl.itouchinq.scalecore.mongo.MongoHandler;
 import nl.itouchinq.scalecore.user.User;
 import nl.itouchinq.scalecore.user.UserManager;
@@ -73,7 +74,8 @@ public final class ScaleCore extends JavaPlugin {
         new UserInfoCommand();
 
         Bukkit.getPluginManager().registerEvents(new MenuListener(this), this);
-        Bukkit.getPluginManager().registerEvents(new CoinWalkListener(), this);
+//        Bukkit.getPluginManager().registerEvents(new CoinWalkListener(), this);
+        Bukkit.getPluginManager().registerEvents(new InteractListener(), this);
     }
 
     private void initializeConfig() {

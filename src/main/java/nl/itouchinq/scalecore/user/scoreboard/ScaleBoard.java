@@ -1,12 +1,11 @@
 package nl.itouchinq.scalecore.user.scoreboard;
 
-import nl.fenixnetwerk.modules.scoreboard.Assemble;
 import nl.fenixnetwerk.modules.scoreboard.AssembleAdapter;
-import nl.fenixnetwerk.modules.scoreboard.AssembleBoard;
+import nl.itouchinq.scalecore.ScaleCore;
+import nl.itouchinq.scalecore.user.User;
 import org.bukkit.entity.Player;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 public class ScaleBoard implements AssembleAdapter {
@@ -19,11 +18,14 @@ public class ScaleBoard implements AssembleAdapter {
     @Override
     public List<String> getLines(Player player) {
         ArrayList<String> lines = new ArrayList<>();
+        User user = ScaleCore.get().getUserManager().getUsers().get(player.getUniqueId());
 
-        lines.add("");
-        lines.add("");
-        lines.add("");
-        lines.add("");
+//        lines.add("");
+//        lines.add("");
+        lines.add("Coins");
+        lines.add("  " + user.getCoins());
+//        lines.add("");
+//        lines.add("");
 
         return lines;
     }
